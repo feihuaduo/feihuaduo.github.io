@@ -23,7 +23,7 @@ function banner() {
 			}, 1500);
 		}
 		else{
-			y.clearInterval();
+			clearInterval(y);
 		}
 	}, 100);
 	function bannerBind() {
