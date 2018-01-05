@@ -48,18 +48,18 @@
 }
 
 #app .title{
-	position: absolute;
+	display:block;
+	line-height:25px;
 	width:100%;
 	text-align: center;
-	top:10px;
 	font-size: 150%;
 }
 
 #app .synopsis{
-	position: absolute;
+	display:block;
+	line-height:25px;
 	width:100%;
 	text-align: center;
-	top:50px;
 	font-size: 100%;
 	color: gray;
 }
