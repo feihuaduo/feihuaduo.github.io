@@ -50,6 +50,7 @@ function init() {
 	var GuangGao = Bmob.Object.extend("GuangGao");
 	var query = new Bmob.Query(GuangGao);
 	query.equalTo("gg_yc", 1);
+	query.descending("createdAt");
 	query.find({
 		success : function(results) {
 			// 循环处理查询到的数据
