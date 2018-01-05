@@ -36,15 +36,20 @@
 
 #app{
 	width: 900px;
-	height: 200px;
+	height: 265px;
 	margin: 20px auto;
 }
 
 .app{
-	width: 225px;
-	height: 245px;
+	width: 215px;
+	height: 265px;
 	float: left;
 	position: relative;
+	overflow: hidden;
+	border-radius:10px;
+	background-color: white;
+	margin: 0 4px;
+	box-shadow: 2px 2px 5px #888888;
 }
 
 #app .title{
@@ -53,6 +58,7 @@
 	width:100%;
 	text-align: center;
 	font-size: 150%;
+	margin: 5px 0;
 }
 
 #app .synopsis{
@@ -62,9 +68,15 @@
 	text-align: center;
 	font-size: 100%;
 	color: gray;
+	margin: 5px 0;
 }
 
 #app img{
-	width: 225px;
+	width: 215px;
 	height: 200px;
+}
+
+#app a{
+	text-decoration: none;
+	color: black;
 }
