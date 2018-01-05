@@ -1,23 +1,22 @@
 @CHARSET "UTF-8";
 
-#body {
-	background-color: #EDEDED;
-	height: 100%;
-	width:100%;
-	position:fixed;
+#head {
+	height: 80px;
+	background-color: black;
 }
 
 #navigation {
 	width: 900px;
 	height: 40px;
 	margin: 0 auto;
+	padding: 20px 0;
 }
 
 #navigation a {
 	text-decoration: none;
 	line-height: 20px;
 	text-align: center;
-	color: black;
+	color: white;
 }
 
 #navigation a:hover {
@@ -32,6 +31,11 @@
 #navigation li {
 	float: left;
 	padding: 0 5px;
+}
+
+#body {
+	background-color: #EDEDED;
+	padding-top: 50px;
 }
 
 #app{
