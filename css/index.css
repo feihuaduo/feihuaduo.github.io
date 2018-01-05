@@ -64,9 +64,9 @@
 #app .synopsis{
 	display:block;
 	line-height:20px;
-	width:75%;
+	width:100%;
 	text-align: center;
-	font-size: 100%;
+	font-size: 75%;
 	color: gray;
 	margin: 5px 0;
 }
