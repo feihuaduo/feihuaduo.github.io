@@ -4,10 +4,10 @@
 	position: relative;
 	width: 900px;
 	height: 300px;
-	border: 1px solid #666;
 	overflow: hidden;
 	margin:0 auto;
 	border-radius:10px;
+	box-shadow: 2px 2px 5px #888888;
 }
 
 #banner ul {
