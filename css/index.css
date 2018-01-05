@@ -72,8 +72,9 @@
 }
 
 #app img{
-	width: 215px;
-	height: 200px;
+	width: 175px;
+	height: 180px;
+	margin: 10px 20px;
 }
 
 #app a{
