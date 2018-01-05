@@ -42,7 +42,7 @@
 
 .app{
 	width: 225px;
-	height: 200px;
+	height: 245px;
 	float: left;
 	position: relative;
 }
@@ -57,7 +57,7 @@
 
 #app .synopsis{
 	display:block;
-	line-height:25px;
+	line-height:20px;
 	width:100%;
 	text-align: center;
 	font-size: 100%;
