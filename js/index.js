@@ -77,7 +77,7 @@ function init() {
 			var a = object.get("gg_tp");
 			div2.append("<a href=\"" + object.get("gg_wz") + "\"><img src=\""
 					+ object.get("gg_tp")._url
-					+ "\" width=\"900\" height=\"300\" alt=\""
+					+ "!/fwfh/900x300\" width=\"900\" height=\"300\" alt=\""
 					+ object.get("gg_name") + "\"/></a>");
 			for (var i = 1; i < results.length; i++) {
 				object = results[i];
