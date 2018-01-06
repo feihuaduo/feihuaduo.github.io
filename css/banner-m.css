@@ -2,8 +2,9 @@
 
 #banner {
 	position: relative;
-	width: 900px;
-	height: 300px;
+	width: 96vw;
+	height: 32vw;
+	initial-scale=1.0;
 	overflow: hidden;
 	margin:0 auto;
 	border-radius:10px;

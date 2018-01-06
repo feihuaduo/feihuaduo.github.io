@@ -1,5 +1,4 @@
 $(function() {
-	
 	var system ={};  
         var p = navigator.platform;       
         system.win = p.indexOf("Win") == 0;  
@@ -13,7 +12,6 @@ $(function() {
              window.location.href="m/index.html";
 			//alert("这是手机");
         }
-	
 	init();
 	banner();
 });
@@ -62,6 +60,9 @@ function banner() {
 function init() {
 	Bmob.initialize("ded0beecb60386cf6d1175ab6c800a5a",
 			"0265bad7535c4d46bc55359078f0c001");
+			
+		
+			
 	var GuangGao = Bmob.Object.extend("GuangGao");
 	var query = new Bmob.Query(GuangGao);
 	query.equalTo("gg_yc", 1);

@@ -47,6 +47,8 @@ function banner() {
 function init() {
 	Bmob.initialize("ded0beecb60386cf6d1175ab6c800a5a",
 			"0265bad7535c4d46bc55359078f0c001");
+			
+		
 	var GuangGao = Bmob.Object.extend("GuangGao");
 	var query = new Bmob.Query(GuangGao);
 	query.equalTo("gg_yc", 1);
@@ -61,14 +63,14 @@ function init() {
 			var a = object.get("gg_tp");
 			div2.append("<a href=\"" + object.get("gg_wz") + "\"><img src=\""
 					+ object.get("gg_tp")._url
-					+ "\" width=\"900\" height=\"300\" alt=\""
+					+ "\" width=\"100%\" height=\"100%\" alt=\""
 					+ object.get("gg_name") + "\"/></a>");
 			for (var i = 1; i < results.length; i++) {
 				object = results[i];
 				div1.append("<li><a href=\"#\">" + (i + 1) + "</a></li>");
 				div2.append("<a href=\"" + object.get("gg_wz")
 						+ "\"><img src=\"" + object.get("gg_tp")._url
-						+ "\" width=\"900\" height=\"300\" alt=\""
+						+ "\" width=\"100%\" height=\"100%\" alt=\""
 						+ object.get("gg_name") + "\"/></a>");
 			}
 		},
