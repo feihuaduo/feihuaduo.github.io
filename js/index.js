@@ -84,7 +84,7 @@ function init() {
 				div1.append("<li><a href=\"#\">" + (i + 1) + "</a></li>");
 				div2.append("<a href=\"" + object.get("gg_wz")
 						+ "\"><img src=\"" + object.get("gg_tp")._url
-						+ "\" width=\"900\" height=\"300\" alt=\""
+						+ "!/fwfh/900x300\" width=\"900\" height=\"300\" alt=\""
 						+ object.get("gg_name") + "\"/></a>");
 			}
 		},
