@@ -3,6 +3,7 @@
 #html{
   padding:0px;
 }
+
 #head {
 	height: 80px;
 	background-color: black;
@@ -20,6 +21,7 @@
 	line-height: 20px;
 	text-align: center;
 	color: white;
+	font-size: 125%;
 }
 
 #navigation a:hover {
