@@ -21,7 +21,7 @@ function banner() {
 	$("#banner_list a").css("opacity" , '0');
 	$("#banner_list :eq(" + n * 2 + ")").animate({
 		opacity : '1'
-	}, 1500);
+	}, 1000);
 	var t = setInterval(function() {
 		n = (n + 1) % count;
 		$("#banner ul :eq(" + n * 2 + ")").trigger("click");
@@ -33,7 +33,7 @@ function banner() {
 			bannerBind();
 			$("#banner_list :eq(" + n * 2 + ")").animate({
 				opacity : '1'
-			}, 1500);
+			}, 1000);
 		}
 		else{
 			clearInterval(y);
@@ -45,10 +45,10 @@ function banner() {
 			n = i;
 			$("#banner_list :eq(" + n * 2 + ")").animate({
 				opacity : '1'
-			}, 1500);
+			}, 1000);
 			$("#banner_list :eq(" + m * 2 + ")").animate({
 				opacity : '0'
-			}, 1500);
+			}, 500);
 			$("#banner ul :eq(" + n * 2 + ")").css("background-color", '#900');
 			$("#banner ul :eq(" + m * 2 + ")").css("background-color", '#6C6D6E');
 			m = n;
