@@ -1,7 +1,7 @@
 $(function() {
 	init();
 	$("#foot a").click(function() {
-		if(page*2>max+2)
+		if(page*5>max+5)
 			$("#foot a").text("没有更多");
 		else
 			addPingLun(tiezi);
@@ -22,7 +22,7 @@ function init() {
 	query.include("message,tiezuo");
 	query.find({
 		success : function(results) {
-			var tiezi=results[0];
+			tiezi=results[0];
 			var user=tiezi.get("tiezuo");
 			
 			max=tiezi.get("pls");
@@ -51,8 +51,8 @@ function addPingLun(tiezi) {
 	var PingLun = Bmob.Object.extend("PingLun");
 	query = new Bmob.Query(PingLun);
 	query.equalTo("tiezi", tiezi);
-	query.skip((page-1)*2);
-	query.limit(2);
+	query.skip((page-1)*5);
+	query.limit(5);
 	query.include("user,hfneirong");
 	query.find({
 		success : function(results) {
