@@ -61,7 +61,6 @@
 	height: 60px;
 	float: left;
 	margin: 5px;
-	float: left;
 }
 
 #name {
@@ -93,4 +92,77 @@
 	width: 400px;
 	height: 400px;
 	margin: 10px 250px;
+}
+
+#reply{
+	width: 900px;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+.reply{
+	width: 900px;
+	margin-bottom: 20px;
+}
+
+
+.reply ul{
+	list-style: none;
+}
+
+.ricon{
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 5px;
+}
+
+.rname {
+	font-weight: bold;
+	font-size: 100%;
+	color: black;
+	line-height: 25px;
+}
+
+.rtime {
+	font-style: italic;
+	color: gray;
+	font-size: 100%;
+	line-height: 25px;
+}
+
+.rfloor{
+	float: right;
+	font-size: 100%;
+	line-height: 25px;
+	font-weight: bold;
+	background-color: blue;
+	color: white;
+	border-radius:3px;
+	padding: 2px;
+}
+
+.rmessage{
+	display:block;
+	width:800px;
+	font-size: 100%;
+	margin: 0 50px;
+}
+
+.rhfmessage{
+	display:block;
+	width:700px;
+	font-size: 100%;
+	margin: 0 50px;
+	background-color: gray;
+	color: white;
+}
+
+#foot{
+	text-align: center;
+}
+
+#foot a{
+	color: gray;
+	text-decoration: none;
 }
