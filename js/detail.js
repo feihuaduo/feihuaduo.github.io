@@ -28,7 +28,7 @@ function init() {
 			max=tiezi.get("pls");
 			$("#title").append("<h1>"+tiezi.get("title")+"</h1>");
 			$("#icon").attr("src",getTouXiang(user));
-			$("#name").text(user.get("signature"));
+			$("#name").text(user.get("username"));
 			$("#time").text(tiezi.createdAt);
 			var message=tiezi.get("message");
 			for(var i=0;i<message.length;i++){
