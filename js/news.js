@@ -1,11 +1,15 @@
 $(function() {
 	init();
 	$("#foot a").click(function() {
-		add();
+		if(page*5>max+5)
+			$("#foot a").text("没有更多");
+		else
+			add();
 	});
 });
 
 var page=1;
+var max=0;
 
 function init() {
 	bmobInit();		
@@ -15,6 +19,14 @@ function init() {
 function add() {
 	var ZiXun = Bmob.Object.extend("ZiXun");
 	var query = new Bmob.Query(ZiXun);
+	query.count({
+	  success: function(count) {
+		  max=count;
+	  },
+	  error: function(error) {
+	  }
+	});
+	query = new Bmob.Query(ZiXun);
 	query.descending("createdAt");
 	query.skip((page-1)*5);
 	query.limit(5);
