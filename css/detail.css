@@ -68,14 +68,14 @@
 	font-weight: bold;
 	font-size: 125%;
 	color: black;
-	line-height: 40px;
+	line-height: 30px;
 }
 
 #time {
 	font-style: italic;
 	color: gray;
 	font-size: 125%;
-	line-height: 40px;
+	line-height: 30px;
 }
 
 #detail {
