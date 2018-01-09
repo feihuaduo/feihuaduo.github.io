@@ -37,7 +37,7 @@ function add() {
 						break;
 					}
 				}
-				div.append("<li><div class=\"news\"><a href=\"#\">"+
+				div.append("<li><div class=\"news\"><a href=\"detail.html?id="+message.id+"\">"+
 						  "<span class=\"title\">"+object.get("zs_title")+"</span>"+
 						  "<span class=\"time\">"+object.createdAt+"</span>"+
 						  "<img src=\""+url+"!/fwfh/160x160\"></a></div></li>");
