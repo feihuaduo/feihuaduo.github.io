@@ -58,8 +58,7 @@ function banner() {
 }
 
 function init() {
-	Bmob.initialize("ded0beecb60386cf6d1175ab6c800a5a",
-			"0265bad7535c4d46bc55359078f0c001");
+	bmobInit();
 			
 		
 			
