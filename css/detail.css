@@ -85,7 +85,9 @@
 }
 
 #detail p {
+	font-size:110%;
 	text-indent: 30px;
+	letter-spacing:1px;
 }
 
 #detail img {
