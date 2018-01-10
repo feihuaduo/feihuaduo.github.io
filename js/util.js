@@ -43,6 +43,6 @@ function delCookie(name)
 }
 
 function isLogin() {
-	var user=getCookie("username");
+	var user=getCookie("username_");
 	return user!=null;
 }

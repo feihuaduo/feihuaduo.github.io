@@ -105,11 +105,11 @@ function getTouXiang(user) {
 
 function initLogin() {
 	if(isLogin()){
-		$("#login a").text(getCookie("username"));
+		$("#login a").text(getCookie("username_"));
 		$("#login a").attr("href","#");
 	}
 	else{
 		$("#login a").text("登录");
-		$("#login a").attr("href","html/login.html");
+		$("#login a").attr("href","login.html");
 	}
 }

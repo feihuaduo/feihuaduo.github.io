@@ -96,7 +96,7 @@ function init() {
 
 function initLogin() {
 	if(isLogin()){
-		$("#login a").text(getCookie("username"));
+		$("#login a").text(getCookie("username_"));
 		$("#login a").attr("href","#");
 	}
 	else{
