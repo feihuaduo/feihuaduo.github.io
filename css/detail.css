@@ -148,14 +148,14 @@
 	display:block;
 	width:800px;
 	font-size: 100%;
-	margin: 0 50px;
+	margin: 0 auto;
 }
 
 .rhfmessage{
 	display:block;
-	width:700px;
+	width:800px;
 	font-size: 100%;
-	margin: 0 50px;
+	margin: 0 auto;
 	background-color: gray;
 	color: white;
 }
