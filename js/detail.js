@@ -96,7 +96,7 @@ function getTouXiang(user) {
 			url="http://q1.qlogo.cn/g?b=qq&nk="+qq+"&s=100&t=999";
 		}
 		else{
-			url="";
+			url="http://bmob-cdn-16129.b0.upaiyun.com/2018/01/10/4e77f5b440efa2e78015ce550786c1af.png!/fwfh/40x40";
 		}
 	}
 	return url;
