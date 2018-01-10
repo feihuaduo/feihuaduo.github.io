@@ -11,6 +11,7 @@ $(function() {
 var page=1;
 var max=0;
 var tiezi;
+var floor=1;
 
 function init() {
 	bmobInit();		
@@ -64,8 +65,9 @@ function addPingLun(tiezi) {
 				if(pinglun.get("hfneirong")!=null)
 					hfneirong="<span class=\"rhfmessage\">"+pinglun.get("hfneirong").get("neirong")+"</span>";
 				$("#reply").append("<div class=\"reply\">"+
+						"<hr>"+
 						"<img class=\"ricon\" src=\""+getTouXiang(user)+"\">"+
-						"<span class=\"rfloor\">"+(i+1)+"楼</span>"+
+						"<span class=\"rfloor\">"+floor+"楼</span>"+
 						"<ul>"+
 						"<li><span class=\"rname\">"+user.get("username")+"</span>"+
 						"<li><span class=\"rtime\">"+pinglun.createdAt+"</span>"+
@@ -73,6 +75,7 @@ function addPingLun(tiezi) {
 						hfneirong+
 						"<span class=\"rmessage\">"+pinglun.get("neirong")+"</span>"
 				);
+				floor++;
 			}
 		},
 		error : function(error) {
