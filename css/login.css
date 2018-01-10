@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+
+#body {
+	background-color: #EDEDED;
+	height: 1000px;
+	padding: 1px;
+}
+
+#center{
+	width: 450px;
+	margin: auto;
+	margin-top: 100px;
+	background-color: white;
+	border-radius:10px;
+	box-shadow: 2px 2px 5px #888888;
+	padding: 1px;
+}
+
+#cen{
+	width:350px;
+	margin:50px auto;
+	padding: 1px;
+}
+
+#cen ul{
+	list-style: none;
+}
+
+#cen img{
+	width: 250px;
+	height: 250px;
+	margin-left: 50px;
+}
+
+#c_title{
+	font-size: 250%;
+	text-align: center;
+}
+
+#c_name{
+	 background-image:url(http://bmob-cdn-16129.b0.upaiyun.com/2018/01/10/eb73213140c886ec809aab1364ced6ec.png!/fwfh/30x30);
+	 background-repeat:no-repeat;
+	 background-position:5px 5px;
+	 background-size:30px; 
+	 border-radius:5px;
+	 border: 2px solid gray;
+	 margin: 5px 0;
+}
+
+#c_name input{
+	height: 30px;
+	width: 300px;
+	margin: 5px auto;
+	margin-left: 40px;
+	color:#999;
+	border: none;
+}
+
+#c_pass{
+	 background-image:url(http://bmob-cdn-16129.b0.upaiyun.com/2018/01/10/cd6dc308407094c980917ef092ee24bf.png!/fwfh/30x30);
+	 background-repeat:no-repeat;
+	 background-position:5px 5px;
+	 background-size:30px;
+	 border-radius:5px;
+	 border: 2px solid gray;
+	 margin: 5px 0;
+}
+
+#c_pass input{
+	height: 30px;
+	width: 300px;
+	margin: 5px auto;
+	margin-left: 40px;
+	color:#999;
+	border: none;
+}
+
+#c_ck{
+	margin: 5px 0;
+}
+
+#c_ck input{
+	height: 10px;
+	line-height: 10px;
+}
+
+#c_ck a{
+	float: right;
+	text-decoration: none;
+}
+
+#c_btu{
+	margin:10px 0;
+}
+
+#c_btu input{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	color:white;
+	margin:10px 0;
+	background-color: #6188DF;
+	border-radius:10px;
+	font-size: 150%;
+}

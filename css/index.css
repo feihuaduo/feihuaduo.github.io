@@ -34,6 +34,10 @@
 	padding: 0 10px;
 }
 
+#navigation #login{
+	float: right;
+}
+
 #body {
 	background-color: #EDEDED;
 	padding-top: 50px;

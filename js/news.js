@@ -13,6 +13,7 @@ var max=0;
 
 function init() {
 	bmobInit();		
+	initLogin();
 	add();
 }
 
@@ -60,4 +61,15 @@ function add() {
 		}
 	});
 	page++;
+}
+
+function initLogin() {
+	if(isLogin()){
+		$("#login a").text(getCookie("username"));
+		$("#login a").attr("href","#");
+	}
+	else{
+		$("#login a").text("登录");
+		$("#login a").attr("href","html/login.html");
+	}
 }

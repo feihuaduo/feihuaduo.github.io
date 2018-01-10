@@ -14,7 +14,8 @@ var tiezi;
 var floor=1;
 
 function init() {
-	bmobInit();		
+	bmobInit();	
+	initLogin();
 
 	var id=getQueryString("id");
 	var Tiezi = Bmob.Object.extend("Tiezi");
@@ -100,4 +101,15 @@ function getTouXiang(user) {
 		}
 	}
 	return url;
+}
+
+function initLogin() {
+	if(isLogin()){
+		$("#login a").text(getCookie("username"));
+		$("#login a").attr("href","#");
+	}
+	else{
+		$("#login a").text("登录");
+		$("#login a").attr("href","html/login.html");
+	}
 }
