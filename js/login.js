@@ -27,11 +27,15 @@ function login() {
 		else{
 			Bmob.User.logIn(name, password, {
 				  success: function(user) {
-					  if($("#c_ck input").get(0).checked)
-						  setCookie("password_",name+"\n"+password);
+					  if(user.get("emailVerified")){
+						  if($("#c_ck input").get(0).checked)
+							  setCookie("password_",name+"\n"+password);
+						  else
+							  delCookie("password_");
+						  window.location.href="../index.html";
+					  }
 					  else
-						  delCookie("password_");
-					  window.location.href="../index.html";
+						  alert("请先到邮箱激活账号");
 				  },
 				  error: function(user, error) {
 					  alert("用户名不存在或密码错误");

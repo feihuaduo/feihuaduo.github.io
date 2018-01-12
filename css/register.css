@@ -53,6 +53,7 @@
 	margin: 5px auto;
 	margin-left: 40px;
 	border: none;
+	
 }
 
 #c_pass{
@@ -73,18 +74,26 @@
 	border: none;
 }
 
+#c_email{
+	 background-image:url(http://bmob-cdn-16129.b0.upaiyun.com/2018/01/10/e7713305407f30b080caab077907cbdf.png!/fwfh/30x30);
+	 background-repeat:no-repeat;
+	 background-position:5px 5px;
+	 background-size:30px;
+	 border-radius:5px;
+	 border: 2px solid gray;
+	 margin: 5px 0;
+}
+
+#c_email input{
+	height: 30px;
+	width: 300px;
+	margin: 5px auto;
+	margin-left: 40px;
+	border: none;
+}
+
 #c_ck{
 	margin: 5px 0;
-}
-
-#c_ck input{
-	height: 20px;
-	float: left;
-}
-
-#c_ck span{
-	line-height: 20px;
-	float: left;
 }
 
 #c_ck a{
