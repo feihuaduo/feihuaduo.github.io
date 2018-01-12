@@ -95,11 +95,11 @@ function init() {
 }
 
 function initLogin() {
-	if(isLogin()){
-		$("#login a").text(getCookie("username_"));
+	var currentUser = Bmob.User.current();
+	if (currentUser) {
+		$("#login a").text(currentUser.get("username"));
 		$("#login a").attr("href","#");
-	}
-	else{
+	} else {
 		$("#login a").text("登录");
 		$("#login a").attr("href","html/login.html");
 	}

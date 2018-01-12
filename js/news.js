@@ -64,8 +64,9 @@ function add() {
 }
 
 function initLogin() {
-	if(isLogin()){
-		$("#login a").text(getCookie("username_"));
+	var currentUser = Bmob.User.current();
+	if (currentUser) {
+		$("#login a").text(currentUser.get("username"));
 		$("#login a").attr("href","#");
 	}
 	else{

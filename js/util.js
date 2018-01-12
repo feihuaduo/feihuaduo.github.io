@@ -40,8 +40,3 @@ function delCookie(name)
 	if(cval!=null)
 	document.cookie= name + "="+cval+";expires="+exp.toGMTString();
 }
-
-function isLogin() {
-	var user=getCookie("username_");
-	return user!=null;
-}
