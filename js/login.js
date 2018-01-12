@@ -1,5 +1,6 @@
 $(function() {
 	initInput();
+	bmobInit();
 	login();
 });
 

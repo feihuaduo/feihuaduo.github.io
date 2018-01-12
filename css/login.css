@@ -80,8 +80,13 @@
 }
 
 #c_ck input{
-	height: 10px;
-	line-height: 10px;
+	height: 20px;
+	float: left;
+}
+
+#c_ck span{
+	line-height: 20px;
+	float: left;
 }
 
 #c_ck a{
