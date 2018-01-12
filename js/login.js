@@ -10,6 +10,11 @@ function initInput() {
 	$("#c_btu input").mouseleave(function() {
 		this.style.backgroundColor='#6188DF';
 	});
+	if(getCookie("password_")!=null){
+		$("#c_name input").val(getCookie("password_").split("\n")[0]);
+		$("#c_pass input").val(getCookie("password_").split("\n")[1]);
+		$("#c_ck input").get(0).checked=true;
+	}
 }
 
 function login() {
@@ -21,6 +26,10 @@ function login() {
 		else{
 			Bmob.User.logIn(name, password, {
 				  success: function(user) {
+					  if($("#c_ck input").get(0).checked)
+						  setCookie("password_",name+"\n"+password);
+					  else
+						  delCookie("password_");
 					  window.location.href="../index.html";
 				  },
 				  error: function(user, error) {
