@@ -40,3 +40,20 @@ function delCookie(name)
 	if(cval!=null)
 	document.cookie= name + "="+cval+";expires="+exp.toGMTString();
 }
+
+function getTouXiang(user) {
+	var url="";
+	if(user.get("avatar")!=null)
+		url=user.get("avatar")._url+"!/fwfh/40x40";
+	else{
+		var email=user.get("email");
+		if(email.indexOf("@qq.com")!=-1){
+			var qq=email.substring(0,email.indexOf("@qq.com"));
+			url="http://q1.qlogo.cn/g?b=qq&nk="+qq+"&s=100&t=999";
+		}
+		else{
+			url="http://bmob-cdn-16129.b0.upaiyun.com/2018/01/10/4e77f5b440efa2e78015ce550786c1af.png!/fwfh/40x40";
+		}
+	}
+	return url;
+}
