@@ -1,10 +1,43 @@
 $(function() {
 	init();
 	$("#foot a").click(function() {
-		if(page*5>max+5)
+		if(page*10>max+10)
 			$("#foot a").text("没有更多");
 		else
 			addPingLun(tiezi);
+	});
+	$("#huifu input[type=\"button\"]").click(function() {
+		var currentUser = Bmob.User.current();
+		if (currentUser) {
+			var s=$("#huifu textarea").text();
+			if(s==""){
+				alert("不能为空");
+			}
+			else{
+				var PingLun = Bmob.Object.extend("PingLun");
+				var p = new PingLun();
+				p.set("neirong", s);
+				p.set("tiezi", tiezi);
+				p.set("user", currentUser);
+				if(hfs!=-1)
+					p.set("hfneirong", pingluns[hfs]);
+				p.save(null, {
+				  success: function(gameScore) {
+					  window.location.reload();
+				  },
+				  error: function(gameScore, error) {
+					  alert(error.description);
+				  }
+				});
+			}
+		}
+		else{
+			alert("请先登录");
+		}
+	});
+	$("#huifu span").click(function() {
+		hfs=-1;
+		$("#huifu span").text("");
 	});
 });
 
@@ -12,9 +45,12 @@ var page=1;
 var max=0;
 var tiezi;
 var floor=1;
+var pingluns;
+var hfs=-1;
 
 function init() {
 	bmobInit();	
+	initInput();
 	initLogin();
 
 	var id=getQueryString("id");
@@ -28,6 +64,7 @@ function init() {
 			var user=tiezi.get("tiezuo");
 			
 			max=tiezi.get("pls");
+			pingluns=new Array(max);
 			$("#title").append("<h1>"+tiezi.get("title")+"</h1>");
 			$("#icon").attr("src",getTouXiang(user));
 			$("#name").text(user.get("username"));
@@ -53,8 +90,8 @@ function addPingLun(tiezi) {
 	var PingLun = Bmob.Object.extend("PingLun");
 	query = new Bmob.Query(PingLun);
 	query.equalTo("tiezi", tiezi);
-	query.skip((page-1)*5);
-	query.limit(5);
+	query.skip((page-1)*10);
+	query.limit(10);
 	query.include("user,hfneirong");
 	query.find({
 		success : function(results) {
@@ -65,7 +102,7 @@ function addPingLun(tiezi) {
 				getTouXiang(user);
 				if(pinglun.get("hfneirong")!=null)
 					hfneirong="<span class=\"rhfmessage\">"+pinglun.get("hfneirong").get("neirong")+"</span>";
-				$("#reply").append("<div class=\"reply\">"+
+				$("#reply").append("<div class=\"reply\" onClick=\"hf("+(floor-1)+")\">"+
 						"<hr>"+
 						"<img class=\"ricon\" src=\""+getTouXiang(user)+"\">"+
 						"<span class=\"rfloor\">"+floor+"楼</span>"+
@@ -76,6 +113,7 @@ function addPingLun(tiezi) {
 						hfneirong+
 						"<span class=\"rmessage\">"+pinglun.get("neirong")+"</span>"
 				);
+				pingluns[floor-1]=pinglun;
 				floor++;
 			}
 		},
@@ -96,4 +134,24 @@ function initLogin() {
 		$("#login a").text("登录");
 		$("#login a").attr("href","login.html");
 	}
+}
+
+function initInput() {
+	$("#huifu input[type=\"button\"]").mouseenter(function() {
+		this.style.backgroundColor='#5378CD';
+	});
+	$("#huifu input[type=\"button\"]").mouseleave(function() {
+		this.style.backgroundColor='#6188DF';
+	});
+}
+
+function hf(i) {
+	if(hfs==i)
+		hfs=-1;
+	else
+		hfs=i;
+	if(hfs==-1)
+		$("#huifu span").text("");
+	else
+		$("#huifu span").text("回复:"+pingluns[hfs].get("neirong"));
 }

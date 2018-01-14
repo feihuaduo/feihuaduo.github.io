@@ -172,3 +172,38 @@
 	color: gray;
 	text-decoration: none;
 }
+
+#huifu{
+	width: 900px;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+#huifu span{
+	display: block;
+	background-color: gray;
+	margin: 5px auto;
+}
+
+#huifu textarea{
+	margin: 0 auto;
+	display: block;
+	font-size: 125%;
+}
+
+#huifu div{
+	height: 30px;
+	width: 100%;
+	margin: 5px auto;
+}
+
+#huifu input[type="button"]{
+	width:80px;
+	height:30px;
+	line-height:30px;
+	color:white;
+	background-color: #6188DF;
+	border-radius:10px;
+	font-size: 100%;
+	float: right;
+}
