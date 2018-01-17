@@ -26,7 +26,7 @@ function banner() {
 }
 
 function bannerClick(i) {
-	n = i;
+	n = i-1;
 	$("#banner_list :eq(" + n * 2 + ")").animate({
 		opacity : '1'
 	}, 1000);
@@ -52,7 +52,7 @@ function init() {
 			var div1 = $("#banner ul");
 			var div2 = $("#banner_list");
 			var object = results[0];
-			div1.append("<li class=\"on\" onClick=\"bannerClick("+i+")\"><a href=\"#\">1</a></li>");
+			div1.append("<li class=\"on\" onClick=\"bannerClick("+1+")\"><a href=\"#\">1</a></li>");
 			var a = object.get("gg_tp");
 			div2.append("<a href=\"" + object.get("gg_wz") + "\"><img src=\""
 					+ object.get("gg_tp")._url
@@ -60,7 +60,7 @@ function init() {
 					+ object.get("gg_name") + "\"/></a>");
 			for (var i = 1; i < results.length; i++) {
 				object = results[i];
-				div1.append("<li onClick=\"bannerClick("+i+")\"><a href=\"#\">" + (i + 1) + "</a></li>");
+				div1.append("<li onClick=\"bannerClick("+(i+1)+")\"><a href=\"#\">" + (i + 1) + "</a></li>");
 				div2.append("<a href=\"" + object.get("gg_wz")
 						+ "\"><img src=\"" + object.get("gg_tp")._url
 						+ "!/fwfh/900x300\" width=\"900\" height=\"300\" alt=\""
