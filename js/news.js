@@ -50,6 +50,8 @@ function add() {
 						break;
 					}
 				}
+				if(url=="")
+					url="http://bmob-cdn-16129.b0.upaiyun.com/2018/01/05/1744d368400ce5bd8041bcfbf6967d7f.jpg";
 				div.append("<li>" +
 						"<div class=\"news\" onClick=\"divClick('"+message.id+"')\">" +
 							"<span class=\"title\">"+object.get("zs_title")+"</span>"+

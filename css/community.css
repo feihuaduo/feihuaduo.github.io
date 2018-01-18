@@ -1,0 +1,173 @@
+@CHARSET "UTF-8";
+
+#head {
+	height: 80px;
+	background-color: black;
+}
+
+#navigation {
+	width: 900px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+#navigation a {
+	text-decoration: none;
+	line-height: 20px;
+	text-align: center;
+	color: white;
+	font-size: 125%;
+}
+
+#navigation a:hover {
+	color: #5079D9;
+}
+
+#navigation ul {
+	padding: 10px 0;
+	list-style: none;
+}
+
+#navigation li {
+	float: left;
+	padding: 0 10px;
+}
+
+#navigation #login{
+	float: right;
+}
+
+#body {
+	background-color: #EDEDED;
+	padding-top: 30px;
+}
+
+#bar{
+	width: 900px;
+	height:30px;
+	margin: 10px auto;
+}
+
+#bar select{
+	float: left;
+	margin-right: 10px;
+}
+
+#bar button{
+	width:80px;
+	height:30px;
+	line-height:30px;
+	color:white;
+	background-color: #6188DF;
+	border-radius:10px;
+	font-size: 100%;
+	float: right;
+}
+
+#news{
+	width: 900px;
+	margin: 20px auto;
+}
+
+.img{
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	float: right;
+}
+
+#news ul {
+	list-style: none;
+}
+
+#news li {
+	margin: 20px 0;
+}
+
+.news{
+	width: 100%;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	border-radius:10px;
+	background-color: white;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+.title{
+	width:760px;
+	word-wrap:break-word;
+	position:absolute;
+	text-indent:30px;
+	top:10px;
+	left:20px;
+	font-weight: bold;
+	font-size: 150%;
+	color: black;
+}
+
+.detail{
+	width:770px;
+	word-wrap:break-word;
+	position:absolute;
+	text-indent:30px;
+	top:50px;
+	left:10px;
+	font-size: 100%;
+	color: black;
+}
+
+.time{
+	position:absolute;
+	bottom:5px;
+	left:20px;
+	font-style: italic;
+	color: gray;
+	font-size: 125%;
+}
+
+.neirong{
+	height: 120px;
+	position: relative;
+	overflow-y:auto;
+}
+
+.tx{
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	float: left;
+}
+
+.name{
+	font-weight: bold;
+	font-size: 100%;
+	color: black;
+	line-height: 40px;
+	float: left;
+}
+
+.pls{
+	position:absolute;
+	bottom:5px;
+	right:10px;
+}
+
+.pls img{
+	width: 20px;
+	height: 20px;
+}
+
+.pls span{
+	line-height: 20px;
+}
+
+#foot{
+	text-align: center;
+}
+
+#foot a{
+	color: gray;
+	text-decoration: none;
+}

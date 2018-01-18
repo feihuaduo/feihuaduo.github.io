@@ -2,15 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>帖子详情</title>
+<title>OURYGO社区</title>
 <link rel="SHORTCUT ICON" href="../data/img/icon.ico"/>
 <link rel="stylesheet" type="text/css" href="../css/all.css" />
-<link rel="stylesheet" type="text/css" href="../css/detail.css" />
+<link rel="stylesheet" type="text/css" href="../css/community.css" />
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/bmob.js"></script>
 <script type="text/javascript" src="../js/bmob-min.js"></script>
 <script type="text/javascript" src="../js/util.js"></script>
-<script type="text/javascript" src="../js/detail.js"></script>
+<script type="text/javascript" src="../js/community.js"></script>
 </head>
 <body>
 	<div id="head">
@@ -24,28 +24,20 @@
 		</div>
 	</div>
 	<div id="body">
-		<div id="title">
+		<div id="bar">
+			<select onchange="changeSelect();">
+				<option selected="selected" value="全部">全部
+			</select>
+			<select onchange="changeSelect2();">
+			</select>
+			<button>发帖</button>
 		</div>
-		<div id="user">
-			<img id="icon" src="">
+		<div id="news">
 			<ul>
-				<li><span id="name"></span>
-				<li><span id="time"></span>
 			</ul>
-		</div>
-		<div id="detail">
-		</div>
-		<div id="reply">
 		</div>
 		<div id="foot">
 			<a href="#foot">加载更多...</a>
-		</div>
-		<div id="huifu">
-			<span></span>
-			<textarea rows="5" cols="80"></textarea>
-			<div>
-				<input type="button" value="回复">
-			</div>
 		</div>
 	</div>
 </body>
