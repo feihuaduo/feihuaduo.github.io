@@ -30,9 +30,11 @@ function bannerClick(i) {
 	$("#banner_list :eq(" + n * 2 + ")").animate({
 		opacity : '1'
 	}, 1000);
+	$("#banner_list :eq(" + n * 2 + ")").css("z-index",1001);
 	$("#banner_list :eq(" + m * 2 + ")").animate({
 		opacity : '0'
 	}, 500);
+	$("#banner_list :eq(" + m * 2 + ")").css("z-index",1000);
 	$("#banner ul :eq(" + n * 2 + ")").css("background-color", '#900');
 	$("#banner ul :eq(" + m * 2 + ")").css("background-color", '#6C6D6E');
 	m = n;
@@ -74,9 +76,11 @@ function init() {
 	}).then(function(obj) {
 		count = $("#banner_list a").length;
 		$("#banner_list a").css("opacity" , '0');
+		$("#banner_list a").css("z-index",1000);
 		$("#banner_list :eq(" + n * 2 + ")").animate({
 			opacity : '1'
 		}, 1000);
+		$("#banner_list :eq(" + n * 2 + ")").css("z-index",1001);
 	}, function(error) {
 	});;
 }
