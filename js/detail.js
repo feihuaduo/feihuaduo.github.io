@@ -9,7 +9,7 @@ $(function() {
 	$("#huifu input[type=\"button\"]").click(function() {
 		var currentUser = Bmob.User.current();
 		if (currentUser) {
-			var s=$("#huifu textarea").text();
+			var s=$("#huifu textarea").val();
 			if(s==""){
 				alert("不能为空");
 			}
