@@ -27,6 +27,29 @@ $(function() {
 					  tiezi.fetchWhenSave(true);
 					  tiezi.set("pls", tiezi.get("pls")+1);
 					  tiezi.save();
+					  if(hfs==-1?currentUser.id!=tiezi.get("tiezuo").id:currentUser.id!=pingluns[hfs].get("user").id){
+						  var MessageAlert = Bmob.Object.extend("MessageAlert");
+						  var messageAlert = new MessageAlert();
+						  messageAlert.set("senduser", currentUser);
+						  messageAlert.set("sendmessage", s);
+						  messageAlert.set("hftie", tiezi);
+						  messageAlert.set("hflx", 1);
+						  messageAlert.set("isShow", false);
+						  if(hfs==-1){
+							  messageAlert.set("hfuser", tiezi.get("tiezuo"));
+						  }
+						  else{
+							  messageAlert.set("hfuser", pingluns[hfs].get("user"));
+							  messageAlert.set("hfhf", pingluns[hfs]);
+						  }
+						  messageAlert.save(null, {
+						    success: function(messageAlert) {
+						    },
+						    error: function(messageAlert, error) {
+						      alert('添加数据失败，返回错误信息：' + error.message);
+						    }
+						  });
+					  }
 					  initTieZi();
 				  },
 				  error: function(gameScore, error) {
@@ -98,6 +121,7 @@ function initTieZi() {
 	$("#name").text("");
 	$("#time").text("");
 	$("#detail").empty();
+	$("#reply").empty();
 	page=1;
 	max=0;
 	floor=1;
@@ -135,8 +159,6 @@ function initTieZi() {
 }
 
 function addPingLun() {
-	$("#reply").empty();
-	
 	var PingLun = Bmob.Object.extend("PingLun");
 	query = new Bmob.Query(PingLun);
 	query.equalTo("tiezi", tiezi);
