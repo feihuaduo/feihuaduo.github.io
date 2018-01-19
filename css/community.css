@@ -138,6 +138,7 @@
 	height: 30px;
 	margin: 5px;
 	float: left;
+	border-radius:50%;
 }
 
 .name{
