@@ -24,6 +24,9 @@ $(function() {
 				p.save(null, {
 				  success: function(gameScore) {
 					  bj++;
+					  tiezi.fetchWhenSave(true);
+					  tiezi.set("pls", tiezi.get("pls")+1);
+					  tiezi.save();
 					  initTieZi();
 				  },
 				  error: function(gameScore, error) {
