@@ -138,7 +138,7 @@ function initTieZi() {
 			var user=tiezi.get("tiezuo");
 			max=tiezi.get("pls");
 			pingluns=new Array(max);
-			$("#title").append("<h1>"+tiezi.get("title")+"</h1>");
+			$("#title").append("<h1>"+HTMLEncode(tiezi.get("title"))+"</h1>");
 			$("#icon").attr("src",getTouXiang(user));
 			$("#name").text(user.get("username"));
 			$("#time").text(tiezi.createdAt);
@@ -148,7 +148,7 @@ function initTieZi() {
 				if(meg.image!=null)
 					$("#detail").append("<img src=\""+meg.image._url+"!/fwfh/400x400\">");
 				if(meg.message!=null)
-					$("#detail").append("<p>"+meg.message+"</p>");
+					$("#detail").append("<p>"+HTMLEncode(meg.message)+"</p>");
 			}
 			addPingLun();
 		},
@@ -173,17 +173,17 @@ function addPingLun() {
 				var hfneirong="";
 				getTouXiang(user);
 				if(pinglun.get("hfneirong")!=null)
-					hfneirong="<span class=\"rhfmessage\">"+pinglun.get("hfneirong").get("neirong")+"</span>";
+					hfneirong="<span class=\"rhfmessage\">"+HTMLEncode(pinglun.get("hfneirong").get("neirong"))+"</span>";
 				$("#reply").append("<div class=\"reply\" onClick=\"hf("+(floor-1)+")\">"+
 						"<hr>"+
 						"<img class=\"ricon\" src=\""+getTouXiang(user)+"\">"+
 						"<span class=\"rfloor\">"+floor+"楼</span>"+
 						"<ul>"+
-						"<li><span class=\"rname\">"+user.get("username")+"</span>"+
+						"<li><span class=\"rname\">"+HTMLEncode(user.get("username"))+"</span>"+
 						"<li><span class=\"rtime\">"+pinglun.createdAt+"</span>"+
 						"</ul>"+
 						hfneirong+
-						"<span class=\"rmessage\">"+pinglun.get("neirong")+"</span>"
+						"<span class=\"rmessage\">"+HTMLEncode(pinglun.get("neirong"))+"</span>"
 				);
 				pingluns[floor-1]=pinglun;
 				floor++;

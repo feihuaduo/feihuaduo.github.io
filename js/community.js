@@ -70,12 +70,12 @@ function add() {
 								"<div class=\"news\" onClick=\"divClick('"+object.id+"')\">" +
 									"<div style=\"height: 40px;\"\">" +
 										"<img class=\"tx\" src=\""+getTouXiang(object.get("tiezuo"))+"\">" +
-										"<span class=\"name\">"+object.get("tiezuo").get("username")+"</span>"+
+										"<span class=\"name\">"+HTMLEncode(object.get("tiezuo").get("username"))+"</span>"+
 									"</div>"+
 									"<hr>"+
 									"<div class=\"neirong\">"+
-										"<span class=\"title\">"+object.get("title")+"</span>"+
-										"<span class=\"detail\">"+d+"</span>"+
+										"<span class=\"title\">"+HTMLEncode(object.get("title"))+"</span>"+
+										"<span class=\"detail\">"+HTMLEncode(d)+"</span>"+
 										"<img class=\"img\" src=\""+url+"!/fwfh/100x100\">" +
 									"</div>"+
 									"<hr>"+

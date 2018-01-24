@@ -62,7 +62,7 @@ function add() {
 				var object = results[i];
 				var hfneirong="";
 				if(object.get("hfhf")!=null)
-					hfneirong="<span class=\"rhfmessage\">"+object.get("hfhf").get("neirong")+"</span>";
+					hfneirong="<span class=\"rhfmessage\">"+HTMLEncode(object.get("hfhf").get("neirong"))+"</span>";
 				var s="未读";
 				if(object.get("isShow"))
 					s="已读";
@@ -72,11 +72,11 @@ function add() {
 						"<img class=\"ricon\" src=\""+getTouXiang(object.get("senduser"))+"\">"+
 						"<span class=\"rfloor\">"+s+"</span>"+
 						"<ul>"+
-							"<li><span class=\"rname\">"+object.get("senduser").get("username")+"</span>"+
+							"<li><span class=\"rname\">"+HTMLEncode(object.get("senduser").get("username"))+"</span>"+
 							"<li><span class=\"rtime\">"+object.createdAt+"</span>"+
 						"</ul>"+
 						hfneirong+
-						"<span class=\"rmessage\">"+object.get("sendmessage")+"</span>"+
+						"<span class=\"rmessage\">"+HTMLEncode(object.get("sendmessage"))+"</span>"+
 					"</div>"+
 				"</li>");
 			}

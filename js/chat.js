@@ -42,8 +42,8 @@ function init() {
 function initLogin() {
 	var currentUser = Bmob.User.current();
 	if (currentUser) {
-		$("#login a").text(HTMLEncode(currentUser.get("username")));
-		$("#login a").attr("href","html/user.html");
+		$("#login a").text(currentUser.get("username"));
+		$("#login a").attr("href","user.html");
 	}
 	else{
 		$("#login a").text("登录");

@@ -143,7 +143,7 @@ function add() {
 				}
 				div.append("<li>" +
 							"<div class=\"news\" onClick=\"divClick('"+message.id+"')\">" +
-								"<span class=\"title\">"+object.get("zs_title")+"</span>"+
+								"<span class=\"title\">"+HTMLEncode(object.get("zs_title"))+"</span>"+
 								"<span class=\"time\">"+object.createdAt+"</span>"+
 								"<img src=\""+url+"!/fwfh/160x160\">" +
 							"</div>"+
