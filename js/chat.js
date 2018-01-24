@@ -7,6 +7,9 @@ $(function() {
 			if(s==""){
 				alert("不能为空");
 			}
+			else if(currentUser.get("liaotian_qx")==1){
+				alert("你已被禁言");
+			}
 			else{
 				var GroupChatMessage = Bmob.Object.extend("GroupChatMessage");
 				var p = new GroupChatMessage();
