@@ -14,6 +14,12 @@ $(function() {
 //        }
 	init();
 	banner();
+	$("#foot a").click(function() {
+		if(page*5>max+5)
+			$("#foot a").text("没有更多");
+		else
+			add();
+	});
 });
 
 var m = n = 0, count;
