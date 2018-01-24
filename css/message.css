@@ -1,0 +1,132 @@
+@CHARSET "UTF-8";
+
+#head {
+	height: 80px;
+	background-color: black;
+}
+
+#navigation {
+	width: 900px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+#navigation a {
+	text-decoration: none;
+	line-height: 20px;
+	text-align: center;
+	color: white;
+	font-size: 125%;
+}
+
+#navigation a:hover {
+	color: #5079D9;
+}
+
+#navigation ul {
+	padding: 10px 0;
+	list-style: none;
+}
+
+#navigation li {
+	float: left;
+	padding: 0 10px;
+}
+
+#navigation #login{
+	float: right;
+}
+
+#body {
+	background-color: #EDEDED;
+	padding-top: 30px;
+}
+
+#bar{
+	width: 900px;
+	height:30px;
+	margin: 10px auto;
+}
+
+#bar select{
+	float: left;
+	margin-right: 10px;
+}
+
+#news{
+	width: 900px;
+	margin: 20px auto;
+}
+
+#news ul {
+	list-style: none;
+}
+
+.reply{
+	width: 900px;
+	margin-bottom: 20px;
+}
+
+
+.reply ul{
+	list-style: none;
+}
+
+.ricon{
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 5px;
+	border-radius:50%;
+}
+
+.rname {
+	font-weight: bold;
+	font-size: 100%;
+	color: black;
+	line-height: 25px;
+}
+
+.rtime {
+	font-style: italic;
+	color: gray;
+	font-size: 100%;
+	line-height: 25px;
+}
+
+.rfloor{
+	float: right;
+	font-size: 100%;
+	line-height: 25px;
+	font-weight: bold;
+	background-color: blue;
+	color: white;
+	border-radius:3px;
+	padding: 2px;
+}
+
+.rmessage{
+	display:block;
+	width:800px;
+	font-size: 100%;
+	margin: 0 auto;
+}
+
+.rhfmessage{
+	display:block;
+	width:800px;
+	font-size: 100%;
+	margin: 0 auto;
+	background-color: gray;
+	color: white;
+}
+
+#foot{
+	text-align: center;
+}
+
+#foot a{
+	color: gray;
+	text-decoration: none;
+}
