@@ -33,10 +33,17 @@ $(function() {
 			alert("请先登录");
 		}
 	});
+	BmobSocketIo.updateTable("GroupChatMessage");
+	BmobSocketIo.onUpdateTable = function(tablename,data) {    
+		$("#chat ul").empty();
+		page=1;
+		add();
+	};
 });
 
 function init() {
 	bmobInit();
+	bmobSocketIoInit();
 	initLogin();
 	initInput();
 	add();
