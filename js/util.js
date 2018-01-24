@@ -47,7 +47,7 @@ function getTouXiang(user) {
 		url=user.get("avatar")._url+"!/fwfh/40x40";
 	else{
 		var email=user.get("email");
-		if(email.indexOf("@qq.com")!=-1){
+		if(email!=null&&email.indexOf("@qq.com")!=-1){
 			var qq=email.substring(0,email.indexOf("@qq.com"));
 			url="http://q1.qlogo.cn/g?b=qq&nk="+qq+"&s=100&t=999";
 		}
@@ -56,4 +56,12 @@ function getTouXiang(user) {
 		}
 	}
 	return url;
+}
+
+function HTMLEncode(html) {
+	var temp = document.createElement("div");
+	(temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+	var output = temp.innerHTML;
+	temp = null;
+	return output;
 }

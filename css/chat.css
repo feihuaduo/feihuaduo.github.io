@@ -1,0 +1,158 @@
+#head {
+	height: 80px;
+	background-color: black;
+}
+
+#navigation {
+	width: 900px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+#navigation a {
+	text-decoration: none;
+	line-height: 20px;
+	text-align: center;
+	color: white;
+	font-size: 125%;
+}
+
+#navigation a:hover {
+	color: #5079D9;
+}
+
+#navigation ul {
+	padding: 10px 0;
+	list-style: none;
+}
+
+#navigation li {
+	float: left;
+	padding: 0 10px;
+}
+
+#navigation #login{
+	float: right;
+}
+
+#body {
+	background-color: #EDEDED;
+	padding: 1px;
+}
+
+#chat{
+	width: 900px;
+	height:600px;
+	margin: 20px auto;
+	overflow: hidden;
+	overflow-y: auto
+}
+
+#chat ul{
+	list-style: none;
+}
+
+#chat li{
+	margin-bottom: 20px;
+}
+
+#chat span{
+	display: block;
+	word-wrap: break-word;
+}
+
+.left{
+	width: 100%;
+	overflow: hidden;
+}
+
+.left img{
+	width: 40px;
+	height: 40px;
+	border-radius:50%;
+	float: left;
+}
+
+.left .chatdiv{
+	margin-left:45px;
+	padding-bottom:35px;
+	border-radius:10px;
+	background-color: white;
+}
+
+.right{
+	width: 100%;
+	overflow: hidden;
+}
+
+.right img{
+	width: 40px;
+	height: 40px;
+	border-radius:50%;
+	float: right;
+}
+
+.right .chatdiv{
+	margin-right:45px;
+	padding-bottom:35px;
+	border-radius:10px;
+	background-color: white;
+}
+
+.chatdiv span:nth-child(1){
+	font-weight: bold;
+	font-size: 125%;
+	color: black;
+	line-height: 30px;
+}
+
+.chatdiv span:nth-child(2){
+	font-size:110%;
+	text-indent: 30px;
+	letter-spacing:1px;
+	clear: right;
+}
+
+.chatdiv span:nth-child(3){
+	font-style: italic;
+	color: gray;
+	font-size: 125%;
+	line-height: 30px;
+	float: right;
+}
+
+#huifu{
+	width: 900px;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+#huifu span{
+	display: block;
+	background-color: gray;
+	margin: 5px auto;
+}
+
+#huifu textarea{
+	margin: 0 auto;
+	display: block;
+	font-size: 125%;
+}
+
+#huifu div{
+	height: 30px;
+	width: 100%;
+	margin: 5px auto;
+}
+
+#huifu input[type="button"]{
+	width:80px;
+	height:30px;
+	line-height:30px;
+	color:white;
+	background-color: #6188DF;
+	border-radius:10px;
+	font-size: 100%;
+	float: right;
+}

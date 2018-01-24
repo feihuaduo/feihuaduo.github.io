@@ -2,15 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>消息提醒</title>
+<title>聊天</title>
 <link rel="SHORTCUT ICON" href="../data/img/icon.ico"/>
 <link rel="stylesheet" type="text/css" href="../css/all.css" />
-<link rel="stylesheet" type="text/css" href="../css/message.css" />
+<link rel="stylesheet" type="text/css" href="../css/chat.css" />
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/bmob.js"></script>
 <script type="text/javascript" src="../js/bmob-min.js"></script>
 <script type="text/javascript" src="../js/util.js"></script>
-<script type="text/javascript" src="../js/message.js"></script>
+<script type="text/javascript" src="../js/chat.js"></script>
 </head>
 <body>
 	<div id="head">
@@ -25,19 +25,16 @@
 		</div>
 	</div>
 	<div id="body">
-		<div id="bar">
-			<select onchange="changeSelect();">
-				<option selected="selected" value="全部">全部
-				<option value="已读">已读
-				<option value="未读">未读
-			</select>
-		</div>
-		<div id="news">
+		<div id="chat">
 			<ul>
 			</ul>
 		</div>
-		<div id="foot">
-			<a href="#foot">加载更多...</a>
+		<div id="huifu">
+			<span></span>
+			<textarea rows="5" cols="80"></textarea>
+			<div>
+				<input type="button" value="回复">
+			</div>
 		</div>
 	</div>
 </body>
