@@ -7,7 +7,13 @@ $(function() {
 			add();
 	});
 	$("#bar button").click(function() {
-		window.location.href="newPost.html";
+		var currentUser = Bmob.User.current();
+		if (currentUser) {
+			window.location.href="newPost.html";
+		}
+		else{
+			alert("请先登录");
+		}
 	});
 });
 
