@@ -67,56 +67,5 @@ function HTMLEncode(html) {
 }
 
 function Base64() {
-	// private property
-	_keyStr = "E5678opABCDqyNOXYZabwxcdz01KL49+/=23IJrstuvFGHMefPQRSTUVWghijklmn";
-	// public method for decoding
-	this.decode = function(input) {
-		var output = "";
-		var chr1, chr2, chr3;
-		var enc1, enc2, enc3, enc4;
-		var i = 0;
-		input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
-		while (i < input.length) {
-			enc1 = _keyStr.indexOf(input.charAt(i++));
-			enc2 = _keyStr.indexOf(input.charAt(i++));
-			enc3 = _keyStr.indexOf(input.charAt(i++));
-			enc4 = _keyStr.indexOf(input.charAt(i++));
-			chr1 = (enc1 << 2) | (enc2 >> 4);
-			chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
-			chr3 = ((enc3 & 3) << 6) | enc4;
-			output = output + String.fromCharCode(chr1);
-			if (enc3 != 64) {
-				output = output + String.fromCharCode(chr2);
-			}
-			if (enc4 != 64) {
-				output = output + String.fromCharCode(chr3);
-			}
-		}
-		output = _utf8_decode(output);
-		return output;
-	}
-	// private method for UTF-8 decoding
-	_utf8_decode = function(utftext) {
-		var string = "";
-		var i = 0;
-		var c = c1 = c2 = 0;
-		while (i < utftext.length) {
-			c = utftext.charCodeAt(i);
-			if (c < 128) {
-				string += String.fromCharCode(c);
-				i++;
-			} else if ((c > 191) && (c < 224)) {
-				c2 = utftext.charCodeAt(i + 1);
-				string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
-				i += 2;
-			} else {
-				c2 = utftext.charCodeAt(i + 1);
-				c3 = utftext.charCodeAt(i + 2);
-				string += String.fromCharCode(((c & 15) << 12)
-						| ((c2 & 63) << 6) | (c3 & 63));
-				i += 3;
-			}
-		}
-		return string;
-	}
+	eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('f="I+/=L";G.F=B(7){8 5="";8 r,s,q;8 t,m,e,p;8 i=0;7=7.H(/[^A-K-J-9\\+\\/\\=]/g,"");D(i<7.E){t=f.n(7.o(i++));m=f.n(7.o(i++));e=f.n(7.o(i++));p=f.n(7.o(i++));r=(t<<2)|(m>>4);s=((m&v)<<4)|(e>>2);q=((e&3)<<6)|p;5=5+b.d(r);l(e!=y){5=5+b.d(s)}l(p!=y){5=5+b.d(q)}}5=x(5);z 5}x=B(a){8 j="";8 i=0;8 c=Q=h=0;D(i<a.E){c=a.k(i);l(c<P){j+=b.d(c);i++}C l((c>M)&&(c<R)){h=a.k(i+1);j+=b.d(((c&N)<<6)|(h&u));i+=2}C{h=a.k(i+1);w=a.k(i+2);j+=b.d(((c&v)<<O)|((h&u)<<6)|(w&u));i+=3}}z j}',54,54,'|||||output||input|var||utftext|String||fromCharCode|enc3|_0||c2||string|charCodeAt|if|enc2|indexOf|charAt|enc4|chr3|chr1|chr2|enc1|63|15|c3|_1|64|return||function|else|while|length|decode|this|replace|E5678opABCDqyNOXYZabwxcdz01KL49|z0|Za|23IJrstuvFGHMefPQRSTUVWghijklmn|191|31|12|128|c1|224'.split('|'),0,{}))
 }
