@@ -1,1 +1,162 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(4(){1p();o();$("#12 a").15(4(){H(G*5>W+5)$("#12 a").Y("没有更多");1q Z()})});3 m=n=0,x;4 o(){3 t=1C(4(){n=(n+1)%x;$("#o u :8("+n*2+")").1E("15")},1F)}4 O(i){n=i-1;$("#7 :8("+n*2+")").N({A:\'1\'},B);$("#7 :8("+n*2+")").9("z-D",10);$("#7 :8("+m*2+")").N({A:\'0\'},1H);$("#7 :8("+m*2+")").9("z-D",B);$("#o u :8("+n*2+")").9("1l-1j",\'#Q\');$("#o u :8("+m*2+")").9("1l-1j",\'#1M\');m=n}4 1p(){1D();11();Z();3 f=p.14.1a("1L");3 g=J p.K(f);g.1K("1J",1);g.19("L");g.1b({M:4(b){3 c=$("#o u");3 d=$("#7");3 e=b[0];c.r("<k v=\\"1t\\" P=\\"O("+1+")\\"><a q=\\"#\\">1</a></k>");3 a=e.6("R");d.r("<a q=\\""+e.6("18")+"\\"><S T=\\""+e.6("R").U+"!/V/1d\\" 1e=\\"Q\\" 1f=\\"1g\\" 1h=\\""+e.6("1i")+"\\"/></a>");I(3 i=1;i<b.C;i++){e=b[i];c.r("<k P=\\"O("+(i+1)+")\\"><a q=\\"#\\">"+(i+1)+"</a></k>");d.r("<a q=\\""+e.6("18")+"\\"><S T=\\""+e.6("R").U+"!/V/1d\\" 1e=\\"Q\\" 1f=\\"1g\\" 1h=\\""+e.6("1i")+"\\"/></a>")}},X:4(a){1m("查询失败: "+a.1n+" "+a.y)}}).1y(4(a){x=$("#7 a").C;$("#7 a").9("A",\'0\');$("#7 a").9("z-D",B);$("#7 :8("+n*2+")").N({A:\'1\'},B);$("#7 :8("+n*2+")").9("z-D",10)},4(a){})}4 11(){3 a=p.1v.1G();H(a){$("#s a").Y(a.6("1u"));$("#s a").1r("q","l/1w.l")}1q{$("#s a").Y("登录");$("#s a").1r("q","l/s.l")}}3 G=1;3 W=0;4 Z(){3 g=p.14.1a("1x");3 h=J p.K(g);h.x({M:4(a){W=a},X:4(a){}});h=J p.K(g);h.19("L");h.1z((G-1)*5);h.1A(5);h.1B("1o");h.1b({M:4(a){3 b=$("#1k u");3 c;3 d;3 e;I(3 i=0;i<a.C;i++){w=a[i];e=w.6("1o");3 f="";I(3 j=0;j<e.6("y").C;j++){F=e.6("y")[j];H(f==""&&F!=13&&F.1s!=13){f=F.1s.U;1I}}b.r("<k>"+"<17 v=\\"1k\\" P=\\"16(\'"+e.1c+"\')\\">"+"<E v=\\"1N\\">"+1O(w.6("1P"))+"</E>"+"<E v=\\"1Q\\">"+w.L+"</E>"+"<S T=\\""+f+"!/V/1R\\">"+"</17>"+"</k>")}},X:4(a){1m("查询失败: "+a.1n+" "+a.y)}});G++}4 16(a){1S.1T("l/1U.l?1c="+a)}',62,119,'|||var|function||get|banner_list|eq|css|||||||||||li|html|||banner|Bmob|href|append|login||ul|class|object|count|message||opacity|1000|length|index|span|obj|page|if|for|new|Query|createdAt|success|animate|bannerClick|onClick|900|gg_tp|img|src|_url|fwfh|max|error|text|add|1001|initLogin|foot|null|Object|click|divClick|div|gg_wz|descending|extend|find|id|900x300|width|height|300|alt|gg_name|color|news|background|alert|code|zs_message|init|else|attr|image|on|username|User|user|ZiXun|then|skip|limit|include|setInterval|bmobInit|trigger|6000|current|500|break|gg_yc|equalTo|GuangGao|6C6D6E|title|HTMLEncode|zs_title|time|160x160|window|open|detail'.split('|'),0,{}))
+$(function() {
+//	var system ={};  
+//        var p = navigator.platform;       
+//        system.win = p.indexOf("Win") == 0;  
+//        system.mac = p.indexOf("Mac") == 0;  
+//       system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
+//       if(system.win||system.mac||system.xll){
+//		   //如果是电脑跳转到           
+//			// alert("这是电脑");
+//      }else{  
+//	 		 //如果是手机,跳转到
+//             window.location.href="m/index.html";
+//			//alert("这是手机");
+//        }
+	init();
+	banner();
+	$("#foot a").click(function() {
+		if(page*5>max+5)
+			$("#foot a").text("没有更多");
+		else
+			add();
+	});
+});
+
+var m = n = 0, count;
+
+function banner() {
+	var t = setInterval(function() {
+		n = (n + 1) % count;
+		$("#banner ul :eq(" + n * 2 + ")").trigger("click");
+	}, 6000);
+}
+
+function bannerClick(i) {
+	n = i-1;
+	$("#banner_list :eq(" + n * 2 + ")").animate({
+		opacity : '1'
+	}, 1000);
+	$("#banner_list :eq(" + n * 2 + ")").css("z-index",1001);
+	$("#banner_list :eq(" + m * 2 + ")").animate({
+		opacity : '0'
+	}, 500);
+	$("#banner_list :eq(" + m * 2 + ")").css("z-index",1000);
+	$("#banner ul :eq(" + n * 2 + ")").css("background-color", '#900');
+	$("#banner ul :eq(" + m * 2 + ")").css("background-color", '#6C6D6E');
+	m = n;
+}
+
+function init() {
+	bmobInit();
+	initLogin();
+	add();
+			
+	var GuangGao = Bmob.Object.extend("GuangGao");
+	var query = new Bmob.Query(GuangGao);
+	query.equalTo("gg_yc", 1);
+	query.descending("createdAt");
+	query.find({
+		success : function(results) {
+			// 循环处理查询到的数据
+			var div1 = $("#banner ul");
+			var div2 = $("#banner_list");
+			var object = results[0];
+			div1.append("<li class=\"on\" onClick=\"bannerClick("+1+")\"><a href=\"#\">1</a></li>");
+			var a = object.get("gg_tp");
+			div2.append("<a href=\"" + object.get("gg_wz") + "\"><img src=\""
+					+ object.get("gg_tp")._url
+					+ "!/fwfh/900x300\" width=\"900\" height=\"300\" alt=\""
+					+ object.get("gg_name") + "\"/></a>");
+			for (var i = 1; i < results.length; i++) {
+				object = results[i];
+				div1.append("<li onClick=\"bannerClick("+(i+1)+")\"><a href=\"#\">" + (i + 1) + "</a></li>");
+				div2.append("<a href=\"" + object.get("gg_wz")
+						+ "\"><img src=\"" + object.get("gg_tp")._url
+						+ "!/fwfh/900x300\" width=\"900\" height=\"300\" alt=\""
+						+ object.get("gg_name") + "\"/></a>");
+			}
+			
+		},
+		error : function(error) {
+			alert("查询失败: " + error.code + " " + error.message);
+		}
+	}).then(function(obj) {
+		count = $("#banner_list a").length;
+		$("#banner_list a").css("opacity" , '0');
+		$("#banner_list a").css("z-index",1000);
+		$("#banner_list :eq(" + n * 2 + ")").animate({
+			opacity : '1'
+		}, 1000);
+		$("#banner_list :eq(" + n * 2 + ")").css("z-index",1001);
+	}, function(error) {
+	});
+}
+
+function initLogin() {
+	var currentUser = Bmob.User.current();
+	if (currentUser) {
+		$("#login a").text(currentUser.get("username"));
+		$("#login a").attr("href","html/user.html");
+	}
+	else{
+		$("#login a").text("登录");
+		$("#login a").attr("href","html/login.html");
+	}
+}
+
+var page=1;
+var max=0;
+
+function add() {
+	var ZiXun = Bmob.Object.extend("ZiXun");
+	var query = new Bmob.Query(ZiXun);
+	query.count({
+	  success: function(count) {
+		  max=count;
+	  },
+	  error: function(error) {
+	  }
+	});
+
+	query = new Bmob.Query(ZiXun);
+	query.descending("createdAt");
+	query.skip((page-1)*5);
+	query.limit(5);
+	query.include("zs_message");
+	query.find({
+		success : function(results) {
+			// 循环处理查询到的数据
+			var div = $("#news ul");
+			var img;
+			var id;
+			var message;
+			for (var i = 0; i < results.length; i++) {
+				object = results[i];
+				message=object.get("zs_message");
+				var url="";
+				for(var j=0; j<message.get("message").length;j++){
+					obj=message.get("message")[j];
+					if(url==""&&obj!=null&&obj.image!=null){
+						url=obj.image._url;
+						break;
+					}
+				}
+				div.append("<li>" +
+							"<div class=\"news\" onClick=\"divClick('"+message.id+"')\">" +
+								"<span class=\"title\">"+HTMLEncode(object.get("zs_title"))+"</span>"+
+								"<span class=\"time\">"+object.createdAt+"</span>"+
+								"<img src=\""+url+"!/fwfh/160x160\">" +
+							"</div>"+
+							"</li>");
+			}
+		},
+		error : function(error) {
+			alert("查询失败: " + error.code + " " + error.message);
+		}
+	});
+	page++;
+}
+
+function divClick(id) {
+	window.open("html/detail.html?id="+id);   
+}
