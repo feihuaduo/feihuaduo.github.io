@@ -6,6 +6,9 @@ $(function() {
 		else
 			add();
 	});
+	$("#bar button").click(function() {
+		window.location.href="newPost.html";
+	});
 });
 
 var page=1;
@@ -15,7 +18,17 @@ function init() {
 	bmobInit();	
 	initLogin();
 	initSelect();
+	initInput();
 	add();
+}
+
+function initInput() {
+	$("#bar button").mouseenter(function() {
+		this.style.backgroundColor='#5378CD';
+	});
+	$("#bar button").mouseleave(function() {
+		this.style.backgroundColor='#6188DF';
+	});
 }
 
 function add() {

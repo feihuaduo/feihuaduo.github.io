@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>发帖</title>
+<link rel="SHORTCUT ICON" href="../data/img/icon.ico"/>
+<link rel="stylesheet" type="text/css" href="../css/all.css" />
+<link rel="stylesheet" type="text/css" href="../css/newPost.css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/bmob.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/newPost.js"></script>
+</head>
+<body>
+	<div id="head">
+		<div id="navigation">
+			<ul>
+				<li><a href="../index.html">首页</a>
+				<li><a href="community.html">社区</a>
+				<li><a href="message.html">消息</a>
+				<li><a href="chat.html">群聊</a>
+				<li id="login"><a href="#"></a>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="newPost">
+			<ul>
+				<li id="title">
+					<span>标题：</span><input type="text">
+				</li>
+				<li id="select">
+					<span>分类：</span>
+					<select onchange="changeSelect();">
+					</select>
+					<select onchange="changeSelect2();">
+					</select>
+				</li>
+				<li id="text">
+					<textarea rows="20"></textarea>
+				</li>
+				<li id="img">
+					<br>
+					<input type="file"><span>暂不支持图片发帖，请下载OURYGO APP</span>
+				</li>
+				<li id="button">
+					<input type="button" value="发布">
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
