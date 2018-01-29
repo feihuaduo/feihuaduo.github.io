@@ -38,6 +38,16 @@
 	float: right;
 }
 
+#linkApp {
+	width: 900px;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+#linkApp span{
+	float: right;
+}
+
 #body {
 	background-color: #EDEDED;
 	padding-top: 50px;
