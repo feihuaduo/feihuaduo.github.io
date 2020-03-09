@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\aigoudan"
+    "\\aigoudan",
+    "\\aigoudan\\js",
+    "\\html",
+    "\\js"
   ],
-  "SelectedNode": "\\aigoudan\\index.html",
+  "SelectedNode": "\\js\\deck.js",
   "PreviewInSolutionExplorer": false
 }
