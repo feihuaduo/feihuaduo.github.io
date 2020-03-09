@@ -150,3 +150,12 @@
 	color: gray;
 	text-decoration: none;
 }
+#footer {
+	background-color: #595959;
+	padding: 40px;
+}
+
+#footer .footer-info {
+	font-size: 14px;
+}
+
